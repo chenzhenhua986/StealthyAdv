@@ -1,0 +1,50 @@
+adv_train1.prototxt the generator is halved 
+adv_train3.prototxt the generator is halved two times 
+adv_train2.prototxt the regularizer is removed 
+
+
+
+
+
+
+
+
+
+window_attack.log: attack a window winthin an image
+
+adv_train1.prototxt 
+lr=1e-4
+the weight of reg_loss is 0.01
+gamma: 1e-4
+power: 0.75
+loss:10000 iterations, around 2500 
+target label:0
+non_target_weight:0.05
+
+adv_train.prototxt 
+log, 
+lr=1e-4, 
+the weight of reg_loss is 0.01
+gamma: 1e-4
+power: 0.75
+
+
+adv_train1.prototxt 
+nohup, 
+lr=1e-4, 
+the weight of reg_loss is 0.01
+gamma: 1e-4
+power: 0.75
+target label: closest to the predicted label
+non_target_weight:0.05
+
+
+adv_train1.prototxt 
+log1, 
+lr=1e-4, 
+the weight of reg_loss is 0.01
+gamma: 1e-4
+power: 0.75
+target label: closest to the predicted label
+non_target_weight:0.1
+
